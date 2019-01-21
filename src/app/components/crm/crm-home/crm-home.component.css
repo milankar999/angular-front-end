@@ -1,0 +1,13 @@
+div.w1h1 {
+    width: 150px;
+    height: 150px;
+    font-family:sans-serif;
+}
+a.userLink {
+    width: 150px;
+    height: 150px;
+    display: table-cell;
+    vertical-align:middle;
+    text-align:center;
+    text-decoration: none;
+}

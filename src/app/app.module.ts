@@ -22,6 +22,15 @@ import { CrmHomeComponent } from './components/crm/crm-home/crm-home.component';
 const routes:Routes=[
   {
     path:'login',component:LoginComponent
+  },
+  {
+    path:'components/crm/crm-po/po-entry/po-type-entry',component:PoTypeEntryComponent
+  },
+  {
+    path:'components/crm/crm-po/po-entry/po-entry-receiver-selection',component:PoEntryReceiverSelectionComponent
+  },
+  {
+    path:'components/crm/crm-home',component:CrmHomeComponent
   }
 ]
 
