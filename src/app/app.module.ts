@@ -1,7 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { Routes, RouterModule } from'@angular/router';
 import { AppRoutingModule } from './app-routing.module';
+import { DndModule} from 'ng2-dnd';
+
+
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { CrmComponent } from './components/crm/crm.component';
@@ -20,9 +26,12 @@ import { PoEntryProductComponent } from './components/crm/crm-po/po-entry/po-ent
 import { CrmHomeComponent } from './components/crm/crm-home/crm-home.component';
 
 const routes:Routes=[
-  {
-    path:'login',component:LoginComponent
-  }
+  {path:'login',component:LoginComponent},
+  {path:'crm/crmheader',component:CrmHeaderComponent},
+  {path:'crm/crmheader/crmpo-type',component: PoTypeEntryComponent},
+  {path:'crm/crmheader/crm-Customer',component: PoTypeEntryComponent},
+  {path:'crm/po-entry/po-entry-customer-selection', component:PoEntryCustomerSelectionComponent},
+  {path:'crm/po-entry/po-entry-product', component:PoEntryProductComponent}
 ]
 
 @NgModule({
@@ -46,7 +55,12 @@ const routes:Routes=[
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+   ReactiveFormsModule, 
     AppRoutingModule,
+    HttpClientModule,
+    NgbModule,
+    DndModule.forRoot(),
     RouterModule.forRoot(routes)
   ],
   providers: [],

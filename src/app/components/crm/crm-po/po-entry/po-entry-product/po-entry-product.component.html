@@ -1,3 +1,248 @@
-<p>
-  po-entry-product works!
-</p>
+
+
+
+<h2>Select a Product List </h2><button type="button" class="btn btn-success btn-lg" (click)="openModalDialog()"> <span class="glyphicon glyphicon-plus"></span>ADD NEW</button> 
+<!--After clicking the buttons open the model dialog using open/close event biniding methods-->
+<div class="backdrop" [ngStyle]="{'display' :display}"></div>  
+<!--modal-->
+<div class="modal" tabindex="-1" role="dailog" [ngStyle]="{'display':display}">
+    <!--modal-dialog-->
+    <div class="modal-dialog" role="document">
+        <!--modal-conent-->
+        <div class="modal-content">
+            <!--modal-header-->
+            <div class="panel panel-primary">
+                <div class="panel-heading text-center">New Product List
+                <button type="button" class="close" (click)="closeModalDialog()">&times;</button>
+
+           </div>
+            <!--modal-body-->
+            <div class="modal-body">
+     
+                    <div class="form-group">
+                        <label class="form-input" for="name">Product Name <a style="color: red">*</a></label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Product Name" required>
+                        <label class="form-input" for="description">Description <a style="color: red">*</a></label>
+                        <input type="text" class="form-control" id="description" name="description" required>
+                        <label class="form-input" for="model">Model <a style="color: red">*</a></label>
+                        <input type="text" class="form-control" id="Model" name="Model"  required>
+                        <label class="form-input" for="brand">Brand <a style="color: red"></a></label>
+                        <textarea type="text" class="form-control" id="brand" name="brand"></textarea>
+                        <label class="form-input" for="Partno">Part No <a style="color: red">*</a></label>
+                        <input type="text" class="form-control" id="partno" name="partno" required>
+                        <label class="form-input" for="productcode">Product Code<a style="color: red">*</a></label>
+                        <input type="text" class="form-control" id="productcode" name="productcode" required>
+                        <label class="form-input" for="hsncode">HSN Code<a style="color: red">*</a></label>
+                        <input type="text" class="form-control" id="hsncode" name="hsncode" required>
+                        <label class="form-input" for="gst">GST No <a style="color: red">*</a></label>
+                        <input type="text" class="form-control" id="gst" name="gst" required>
+                        <label class="form-input" for="quantity">Quantity <a style="color: red">*</a></label>
+                        <input type="text" class="form-control" id="quantity" name="quantity" required>
+                        <label class="form-input" for="UOM">Inco Term </label>
+                        <input type="text" class="form-control" id="IncoTerm" name="IncoTerm">
+                        <label class="form-input" for="UOM">UOM </label>
+                        <input type="text" class="form-control" id="UOM" name="UOM">
+                        <label class="form-input" for="price">Price </label>
+                        <input type="text" class="form-control" id="Price" name="Price">
+                        </div>
+        
+            </div>
+            <!--modal-footer-->
+            <div class="modal-footer">
+                    <button type="button" class="btn btn-success" (click)="closeModalDialog()">Submit</button>
+                <button type="button" class="btn btn-danger" (click)="closeModalDialog()">Cancel</button>
+                
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<hr>
+ <div class="col-md-offset-2 col-md-8">
+        <div class="panel panel-primary">
+            <div class="panel-heading text-center">Production List</div>
+                 <div class="panel-body">
+                     <div class="col-md-4">
+                         <input type="text" class="form-control" placeholder="search...">
+                     </div>
+                 </div>
+    
+     <table id="dcustomer" class="table table-hover table-bordered table-sm" width="100%">
+         <thead>
+             <tr>
+                <th></th>
+                <th>Product Name</th>
+                <th>Description</th>
+                <th>Model</th>
+                <th>Brand</th>
+                <th>Part No</th>
+                <th>Product Code</th>
+                <th>HSN Code</th>
+                <th>GST</th>
+                <th>Quantity</th>
+                <th>UOM</th>
+                <th>Price</th>
+                <th></th>
+    
+            </tr >
+            <tr>
+                 <td>
+                    <span class="glyphicon glyphicon-forward" style="color: blue"></span>
+                </td>
+           
+                 <td>handTools</td>
+                 <td>zvxcbvn</td>
+                 <td>C00124</td>
+                 <td>xfdgfh</td>
+                 <td>dfgdfh</td>
+                 <td>jygh</td>
+                 <td>dfgf</td>
+                 <td>dfghg</td>
+                 <td>jnhgbf</td>
+                 <td>gfb</td>
+                 <td>zdfg</td>
+                 <td></td>
+
+       
+             </tr>
+             <tr>
+                    <td>
+                       <span class="glyphicon glyphicon-forward" style="color: blue"></span>
+                   </td>
+              
+                   <td>handTools</td>
+                 <td>zvxcbvn</td>
+                 <td>C00124</td>
+                 <td>xfdgfh</td>
+                 <td>dfgdfh</td>
+                 <td>jygh</td>
+                 <td>dfgf</td>
+                 <td>dfghg</td>
+                 <td>jnhgbf</td>
+                 <td>gfb</td>
+                 <td>zdfg</td>
+                 <td></td>
+
+                </tr>
+                <tr>
+                        <td>
+                           <span class="glyphicon glyphicon-forward" style="color: blue"></span>
+                       </td>
+                  
+                       <td>handTools</td>
+                 <td>zvxcbvn</td>
+                 <td>C00124</td>
+                 <td>xfdgfh</td>
+                 <td>dfgdfh</td>
+                 <td>jygh</td>
+                 <td>dfgf</td>
+                 <td>dfghg</td>
+                 <td>jnhgbf</td>
+                 <td>gfb</td>
+                 <td>zdfg</td>
+                 <td></td>
+
+              
+                    </tr>
+            
+        </thead>
+    </table> <br>
+
+    </div>
+    </div>
+    <hr>
+    <div class="col-md-offset-2 col-md-8">
+        <div class="panel panel-primary">
+            <div class="panel-heading text-center">Production List</div>
+                 <div class="panel-body">
+                     <div class="col-md-4">
+                         <input type="text" class="form-control" placeholder="search...">
+                     </div>
+                 </div>
+    
+     <table  id="dcustomer1" class="table table-hover table-bordered table-sm" width="100%">
+         <thead>
+           
+             <tr>
+                <th></th>
+                <th>Product Name</th>
+                <th>Description</th>
+                <th>Model</th>
+                <th>Brand</th>
+                <th>Part No</th>
+                <th>Product Code</th>
+                <th>HSN Code</th>
+                <th>GST</th>
+                <th>Quantity</th>
+                <th>UOM</th>
+                <th>Price</th>
+                <th></th>
+    
+            </tr >
+            <tr mwlDraggable>
+                 <td>
+                    <span class="glyphicon glyphicon-forward" style="color: blue"></span>
+                </td>
+           
+                 <td>handTools</td>
+                 <td>zvxcbvn</td>
+                 <td>C00124</td>
+                 <td>xfdgfh</td>
+                 <td>dfgdfh</td>
+                 <td>jygh</td>
+                 <td>dfgf</td>
+                 <td>dfghg</td>
+                 <td>jnhgbf</td>
+                 <td>gfb</td>
+                 <td>zdfg</td>
+                 <td></td>
+
+       
+             </tr>
+             <tr>
+                    <td>
+                       <span class="glyphicon glyphicon-forward" style="color: blue"></span>
+                   </td>
+              
+                   <td>handTools</td>
+                 <td>zvxcbvn</td>
+                 <td>C00124</td>
+                 <td>xfdgfh</td>
+                 <td>dfgdfh</td>
+                 <td>jygh</td>
+                 <td>dfgf</td>
+                 <td>dfghg</td>
+                 <td>jnhgbf</td>
+                 <td>gfb</td>
+                 <td>zdfg</td>
+                 <td></td>
+
+                </tr>
+                <tr>
+                        <td>
+                           <span class="glyphicon glyphicon-forward" style="color: blue"></span>
+                       </td>
+                  
+                       <td>handTools</td>
+                 <td>zvxcbvn</td>
+                 <td>C00124</td>
+                 <td>xfdgfh</td>
+                 <td>dfgdfh</td>
+                 <td>jygh</td>
+                 <td>dfgf</td>
+                 <td>dfghg</td>
+                 <td>jnhgbf</td>
+                 <td>gfb</td>
+                 <td>zdfg</td>
+                 <td></td>
+
+              
+                    </tr>
+            
+        </thead>
+    </table> <br>
+
+    </div>
+    </div>
+
+   

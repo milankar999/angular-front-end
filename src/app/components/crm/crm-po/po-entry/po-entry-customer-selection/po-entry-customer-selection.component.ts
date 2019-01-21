@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators} from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-po-entry-customer-selection',
@@ -6,10 +9,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./po-entry-customer-selection.component.css']
 })
 export class PoEntryCustomerSelectionComponent implements OnInit {
-
+ 
+ display='none';
   constructor() { }
+  
 
   ngOnInit() {
   }
+  
+  openModalDialog(){
+    this.display='block';
+  }
+  closeModalDialog(){
+    this.display='none';
 
+  }
 }
+
+
