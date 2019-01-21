@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormControl, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-po-entry-receiver-selection',
@@ -6,10 +7,29 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./po-entry-receiver-selection.component.css']
 })
 export class PoEntryReceiverSelectionComponent implements OnInit {
+  date;
+  logedInForm;
+  emailId;
+  customername;
+  display='none';
+   constructor() { }
 
-  constructor() { }
+
+ 
 
   ngOnInit() {
   }
-
+  mdfLogin(data){
+    this.customername=data.customername;
+  }
+  openModalDialog(){
+    this.display='block';
+  }
+  closeModalDialog(){
+    this.display='none';
+    
+  }
 }
+
+
+ 
